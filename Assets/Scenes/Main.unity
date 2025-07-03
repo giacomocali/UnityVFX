@@ -237,13 +237,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 330585543}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0.42298096, z: -0, w: 0.90613866}
+  m_LocalRotation: {x: -0, y: -0.52849984, z: -0, w: 0.84893346}
   m_LocalPosition: {x: 2.657, y: 1.767, z: -2.833}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: -50.046, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -63.808, z: 0}
 --- !u!114 &330585547
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10358,9 +10358,11 @@ MonoBehaviour:
   horizontalSlash: {fileID: 1336440456}
   verticalSlash: {fileID: 1758672026}
   dustEffect: {fileID: 704185523}
+  getsugaJujisho: {fileID: 1402294240}
   horizontalDelay: 1.5
   verticalDelay: 2
   dustDelay: 0.4
+  getsugaDelay: 0.2
 --- !u!1 &1402294238
 GameObject:
   m_ObjectHideFlags: 0
@@ -10473,7 +10475,7 @@ ParticleSystem:
   emitterVelocityMode: 1
   looping: 0
   prewarm: 0
-  playOnAwake: 1
+  playOnAwake: 0
   useUnscaledTime: 0
   autoRandomSeed: 1
   startDelay:
@@ -15306,7 +15308,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -3455154388925276819, guid: 6ee76e6a830318d47bc2a86cca6e67f9, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 377798815641841798, guid: 6ee76e6a830318d47bc2a86cca6e67f9, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
@@ -15357,10 +15359,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2100000, guid: 70aa75dcfb054eb42928a33c14d6bc9b, type: 2}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: -8993046572254479563, guid: 6ee76e6a830318d47bc2a86cca6e67f9, type: 3}
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 6ee76e6a830318d47bc2a86cca6e67f9, type: 3}
-      insertIndex: 4
+      insertIndex: -1
       addedObject: {fileID: 1823010282}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6ee76e6a830318d47bc2a86cca6e67f9, type: 3}

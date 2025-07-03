@@ -7,8 +7,12 @@ public class VFXManager : MonoBehaviour
     public GameObject smallSword, bigSword;
     public VisualEffect horizontalSlash;
     public VisualEffect verticalSlash;
+    
     public ParticleSystem dustEffect;
-    public float horizontalDelay, verticalDelay, dustDelay;
+    public ParticleSystem getsugaJujisho;
+ 
+
+    public float horizontalDelay, verticalDelay, dustDelay, getsugaDelay;
 
 
     private void Start()
@@ -37,5 +41,8 @@ public class VFXManager : MonoBehaviour
         yield return new WaitForSeconds(verticalDelay-1.5f);
         //swordRenderer.sharedMesh = bigBlade;
         verticalSlash.Play();
+
+        yield return new WaitForSeconds(getsugaDelay);
+        getsugaJujisho.Play();
     }
 }
