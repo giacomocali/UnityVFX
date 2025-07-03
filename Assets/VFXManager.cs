@@ -4,10 +4,13 @@ using UnityEngine.VFX;
 
 public class VFXManager : MonoBehaviour
 {
+    public GameObject smallSword, bigSword;
     public VisualEffect horizontalSlash;
     public VisualEffect verticalSlash;
     public ParticleSystem dustEffect;
     public float horizontalDelay, verticalDelay, dustDelay;
+
+
     private void Start()
     {
         horizontalSlash.Stop();
@@ -17,11 +20,22 @@ public class VFXManager : MonoBehaviour
 
     IEnumerator chainEffects()
     {
+        bigSword.SetActive(false);
+        smallSword.SetActive(true);
+        
         yield return new WaitForSeconds(horizontalDelay);
+        //swordRenderer.sharedMesh = smallBlade;
         horizontalSlash.Play();
+
         yield return new WaitForSeconds(dustDelay);
         dustEffect.Play();
-        yield return new WaitForSeconds(verticalDelay);
+
+        yield return new WaitForSeconds(1.5f);
+        bigSword.SetActive(true);
+        smallSword.SetActive(false);
+
+        yield return new WaitForSeconds(verticalDelay-1.5f);
+        //swordRenderer.sharedMesh = bigBlade;
         verticalSlash.Play();
     }
 }
