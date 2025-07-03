@@ -25034,7 +25034,7 @@ Transform:
   m_GameObject: {fileID: 1402294238}
   serializedVersion: 2
   m_LocalRotation: {x: -0.110160284, y: -0.69847316, z: -0.110160284, w: 0.69847316}
-  m_LocalPosition: {x: -1.74, y: 0.902, z: 0}
+  m_LocalPosition: {x: 0.67, y: 0.123, z: -0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -30432,7 +30432,7 @@ MonoBehaviour:
   verticalDelay: 2
   dustDelay: 0.4
   additionalNoiseDelay: 0.2
-  getsugaDelay: 0.4
+  getsugaDelay: 0.8
 --- !u!4 &1894918302
 Transform:
   m_ObjectHideFlags: 0
