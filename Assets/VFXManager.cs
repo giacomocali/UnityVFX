@@ -7,12 +7,12 @@ public class VFXManager : MonoBehaviour
     public GameObject smallSword, bigSword;
     public VisualEffect horizontalSlash;
     public VisualEffect verticalSlash;
-    
-    public ParticleSystem dustEffect;
+
+    public ParticleSystem dustEffect, verticalDustEffect, additionalNoise, vAdditionalNoise;
     public ParticleSystem getsugaJujisho;
  
 
-    public float horizontalDelay, verticalDelay, dustDelay, getsugaDelay;
+    public float horizontalDelay, verticalDelay, dustDelay, additionalNoiseDelay, getsugaDelay;
 
 
     private void Start()
@@ -24,25 +24,33 @@ public class VFXManager : MonoBehaviour
 
     IEnumerator chainEffects()
     {
+        // HORIZONTAL SLASH -------------
         bigSword.SetActive(false);
         smallSword.SetActive(true);
-        
         yield return new WaitForSeconds(horizontalDelay);
-        //swordRenderer.sharedMesh = smallBlade;
         horizontalSlash.Play();
-
-        yield return new WaitForSeconds(dustDelay);
+        yield return new WaitForSeconds(additionalNoiseDelay);
+        additionalNoise.Play();
+        yield return new WaitForSeconds(dustDelay-additionalNoiseDelay);
         dustEffect.Play();
 
-        yield return new WaitForSeconds(1.5f);
+        // VERTICAL SLASH -----------------
+        yield return new WaitForSeconds(2f);
         bigSword.SetActive(true);
         smallSword.SetActive(false);
-
-        yield return new WaitForSeconds(verticalDelay-1.5f);
-        //swordRenderer.sharedMesh = bigBlade;
+        yield return new WaitForSeconds(verticalDelay-2f);
         verticalSlash.Play();
+        yield return new WaitForSeconds(0.2f);
+        vAdditionalNoise.Play();
+        yield return new WaitForSeconds(dustDelay-0.2f);
+        verticalDustEffect.Play();
 
+        // GETSUGA JUJISHO -------------------
         yield return new WaitForSeconds(getsugaDelay);
+        additionalNoise.gameObject.SetActive(false);
+        vAdditionalNoise.gameObject.SetActive(false);
+        horizontalSlash.enabled = false;
+        verticalSlash.enabled = false;
         getsugaJujisho.Play();
     }
 }

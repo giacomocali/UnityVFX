@@ -48,13 +48,16 @@ Material:
     m_Floats:
     - _BUILTIN_QueueControl: -1
     - _BUILTIN_QueueOffset: 0
-    - _GlowPower: 7
+    - _BlinkTimer: 2
+    - _FresnelPower: 2
+    - _GlowPower: 20
     - _NoiseScale: 4
     - _NoiseSpeed: 0.5
     - _QueueControl: 0
     - _QueueOffset: 0
     m_Colors:
-    - _Color: {r: 1, g: 0.7293739, b: 0.18431371, a: 1}
+    - _Color: {r: 1, g: 0.69489175, b: 0.18431371, a: 1}
+    - _FresnelColor: {r: 1, g: 1, b: 1, a: 0}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
 --- !u!114 &3774743057979553321
