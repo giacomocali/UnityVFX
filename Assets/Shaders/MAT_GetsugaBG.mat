@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: MAT_GetsugaJujisho
-  m_Shader: {fileID: -6465566751694194690, guid: 7ce3a3eef86576a48b11ace10201d95d, type: 3}
+  m_Name: MAT_GetsugaBG
+  m_Shader: {fileID: -6465566751694194690, guid: 8b04ecc80755ccc4c8a3e25d88eec7c4, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
@@ -24,12 +24,12 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
-    - _MainTexture:
-        m_Texture: {fileID: 2800000, guid: ba8464fa44c2d4347b28d4f3100b8a18, type: 3}
+    - _MainTex:
+        m_Texture: {fileID: 2800000, guid: 2be5385ddaeb159419145b3cb23a461e, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - _SampleTexture2D_735bd6b762b446fbbe01222ac68ada14_Texture_1_Texture2D:
-        m_Texture: {fileID: 2800000, guid: ba8464fa44c2d4347b28d4f3100b8a18, type: 3}
+    - _SampleTexture2D_66a01e84f79046b9a1857fb385914019_Texture_1_Texture2D:
+        m_Texture: {fileID: 2800000, guid: 2be5385ddaeb159419145b3cb23a461e, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - unity_Lightmaps:
@@ -46,22 +46,13 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _AlphaNoiseIntensity: 2.5
-    - _BUILTIN_QueueControl: -1
-    - _BUILTIN_QueueOffset: 0
-    - _BlinkTimer: 5
-    - _FresnelPower: 2
-    - _GlowPower: 30
-    - _NoiseScale: 7
-    - _NoiseSpeed: 0.7
+    - _NoiseSpeed: 0.5
     - _QueueControl: 0
     - _QueueOffset: 0
-    m_Colors:
-    - _Color: {r: 1, g: 0.69489175, b: 0.18431371, a: 1}
-    - _FresnelColor: {r: 1, g: 1, b: 1, a: 1}
+    m_Colors: []
   m_BuildTextureStacks: []
   m_AllowLocking: 1
---- !u!114 &3774743057979553321
+--- !u!114 &3424829148168902746
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}

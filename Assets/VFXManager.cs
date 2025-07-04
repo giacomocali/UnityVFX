@@ -9,7 +9,7 @@ public class VFXManager : MonoBehaviour
     public VisualEffect verticalSlash;
 
     public ParticleSystem dustEffect, verticalDustEffect, additionalNoise, vAdditionalNoise;
-    public ParticleSystem getsugaJujisho;
+    public GameObject getsugaJujisho;
  
 
     public float horizontalDelay, verticalDelay, dustDelay, additionalNoiseDelay, getsugaDelay;
@@ -35,10 +35,10 @@ public class VFXManager : MonoBehaviour
         dustEffect.Play();
 
         // VERTICAL SLASH -----------------
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(1f);
         bigSword.SetActive(true);
         smallSword.SetActive(false);
-        yield return new WaitForSeconds(verticalDelay-2f);
+        yield return new WaitForSeconds(verticalDelay-1f);
         verticalSlash.Play();
         yield return new WaitForSeconds(0.2f);
         vAdditionalNoise.Play();
@@ -49,8 +49,6 @@ public class VFXManager : MonoBehaviour
         yield return new WaitForSeconds(getsugaDelay);
         additionalNoise.gameObject.SetActive(false);
         vAdditionalNoise.gameObject.SetActive(false);
-        horizontalSlash.enabled = false;
-        verticalSlash.enabled = false;
-        getsugaJujisho.Play();
+        getsugaJujisho.SetActive(true);
     }
 }
